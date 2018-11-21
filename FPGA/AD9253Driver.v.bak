@@ -1,0 +1,21 @@
+module AD9253Driver(
+
+		 input wire Data_A_L,
+		 input wire Data_A_H,
+		 input wire Data_B_L,
+		 input wire Data_B_H,
+		 input wire Data_C_L,
+		 input wire Data_C_H,
+		 input wire Data_D_L,
+		 input wire Data_D_H,
+
+       input wire DCO,
+       input wire FCO,
+		 
+		 output reg       Data_Valid,
+		 output reg[13:0] Data_CHA,
+		 output reg[13:0] Data_CHB,
+		 output reg[13:0] Data_CHC,
+		 output reg[13:0] Data_CHD
+
+)

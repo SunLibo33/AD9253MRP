@@ -1,0 +1,134 @@
+#Constraining PLL Base Clocks Manually
+create_clock -period 50.000 -waveform {0.000 25.000} -name Ex_Clock [get_ports {SysClk}]
+
+#The Timing Analyzer determines the correct settings based on the IP Catalog instantiation of the PLL.
+derive_pll_clocks -create_base_clocks
+derive_clock_uncertainty
+
+#Constraining PLL Output and Base Clocks Manually
+#create_generated_clock \
+#-name PLL_C0 \
+#-source [get_pins {MyPLL_inst|inclk0}] \
+#[get_pins {MyPLL_inst|c0}]\
+#
+#create_generated_clock \
+#-name PLL_C1 \
+#-multiply_by 4 \
+#-source [get_pins {MyPLL_inst|inclk0}] \
+#[get_pins {MyPLL_inst|c1}]
+
+create_clock -name Clock_Virtual_In_640M -period 1.5625
+
+ 
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_A_L}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_A_L}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_A_H}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_A_H}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_B_L}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_B_L}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_B_H}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_B_H}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_C_H}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_C_H}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_C_L}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_C_L}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_D_H}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_D_H}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {Data_D_L}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {Data_D_L}]
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {DCO}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1 \
+[get_ports {DCO}]
+
+
+#create the input maximum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-max 1.4825 \
+[get_ports {FCO}]
+#create the input minimum delay for the data input to the
+#FPGA that accounts for all delays specified
+set_input_delay -clock Clock_Virtual_In_640M \
+-min 0.1\
+[get_ports {FCO}]
+
+

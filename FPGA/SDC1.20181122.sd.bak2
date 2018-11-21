@@ -1,0 +1,62 @@
+#Constraining PLL Base Clocks Manually
+create_clock -period 20.000 -waveform {0.000 10.000} -name Ex_Clock [get_ports {SysClk}]
+
+#The Timing Analyzer determines the correct settings based on the IP Catalog instantiation of the PLL.
+derive_pll_clocks -create_base_clocks
+derive_clock_uncertainty
+
+#create_clock -period 1.5625 -name CLK_VIR -waveform {0 0.78125}
+
+################### AD9253 -> FPGA Interface ####################
+# Create virtual clock for AD9253.  Phase-shift it 90 degrees to say it is center-aligned
+#create_clock -period 3.125 -name adc1_lclk_ext -waveform {0.78125 2.34375}
+create_clock -period 3.125 -name adc_clk_ext -waveform {0.78125 2.34375}
+
+# The device does not spec what it is actually doing, but what it can provide.  We will use our relationship to figure out what the ADS5263 is actually doing
+# We will need to know the setup relationship and hold relationship to perform this calculation, which are just +90 degrees and -90 degrees in Explicit Clock Shift Mode
+set relationship 0.5 ; # What should be the exact value??
+
+# TI AD9253 datasheet says it can provide a Tsu and Th to the FPGA:
+set adc_tsu 0.47
+set adc_th 0.47 
+
+# Need to calculate what AD9253 is actually doing
+set adc_skew_max [expr $relationship - $adc_tsu] ; # 3.0 - 2.0 = 1.0
+set adc_skew_min [expr -$relationship - (-$adc_th)] ; # -3.0 - (-2.0) = -1.0
+
+# The board skew need to be accounted for.  Positive means data is longer than clk, negative means it is shorter than clk.  I made up some values:
+set board_dataclk_skew_max 0.05         ; # please refer to PCB simulation for a reasonable value
+set board_dataclk_skew_min -0.05        ; # please refer to PCB simulation for a reasonable value
+
+# Now just add the ADC skew and board skew to calculate external delays:
+set ssync_in_max [expr $adc_skew_max + $board_dataclk_skew_max] ;# 1.0 + 0.05 = 1.05
+set ssync_in_min [expr $adc_skew_min + $board_dataclk_skew_min] ;# -1.0 + (-0.05) = -1.05
+
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_A_L}]
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_A_L}]
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_A_L}] -clock_fall -add_delay
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_A_L}] -clock_fall -add_delay
+
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_A_H}]
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_A_H}]
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_A_H}] -clock_fall -add_delay
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_A_H}] -clock_fall -add_delay
+
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_B_L}]
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_B_L}]
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_B_L}] -clock_fall -add_delay
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_B_L}] -clock_fall -add_delay
+
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_B_H}]
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_B_H}]
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {Data_B_H}] -clock_fall -add_delay
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {Data_B_H}] -clock_fall -add_delay
+
+
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {FCO}]
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {FCO}]
+set_input_delay -clock adc_clk_ext -max $ssync_in_max [get_ports {FCO}] -clock_fall -add_delay
+set_input_delay -clock adc_clk_ext -min $ssync_in_min [get_ports {FCO}] -clock_fall -add_delay
+
+
+##################################################################
