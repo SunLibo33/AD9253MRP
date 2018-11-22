@@ -1,17 +1,17 @@
-Fitter Status : Successful - Thu Nov 22 06:45:39 2018
+Fitter Status : Successful - Fri Nov 23 00:14:17 2018
 Quartus II 64-Bit Version : 14.1.0 Build 186 12/03/2014 SJ Full Version
 Revision Name : DSReceiver
 Top-level Entity Name : DSReceiver
 Family : Cyclone IV GX
 Device : EP4CGX30BF14C8
 Timing Models : Final
-Total logic elements : 1,472 / 29,440 ( 5 % )
-    Total combinational functions : 810 / 29,440 ( 3 % )
-    Dedicated logic registers : 1,236 / 29,440 ( 4 % )
-Total registers : 1240
+Total logic elements : 2,785 / 29,440 ( 9 % )
+    Total combinational functions : 1,243 / 29,440 ( 4 % )
+    Dedicated logic registers : 2,499 / 29,440 ( 8 % )
+Total registers : 2501
 Total pins : 28 / 81 ( 35 % )
 Total virtual pins : 0
-Total memory bits : 13,056 / 1,105,920 ( 1 % )
+Total memory bits : 35,552 / 1,105,920 ( 3 % )
 Embedded Multiplier 9-bit elements : 0 / 160 ( 0 % )
 Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
 Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )

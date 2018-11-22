@@ -112,7 +112,7 @@ VCCIO8                       : C7        : power  :                   : 2.5V    
 Data_D_H                     : C8        : input  : LVDS              :         : 7         : Y              
 VCCIO7                       : C9        : power  :                   : 2.5V    : 7         :                
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-Rst_n                        : C11       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 7         :                
 Data_C_L(n)                  : C13       : input  : LVDS              :         : 7         : Y              
 GND                          : D1        : gnd    :                   :         :           :                
@@ -201,7 +201,7 @@ MSEL0                        : K5        :        :                   :         
 nSTATUS                      : K6        :        :                   :         : 3         :                
 VCC_CLKIN3A                  : K7        : power  :                   : 2.5V    : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 4         :                
+Rst_n                        : K9        : input  : 2.5 V             :         : 4         : N              
 CLK_Drive                    : K10       : output : Differential 2.5-V SSTL Class II :         : 4         : Y              
 Data_A_H                     : K11       : input  : LVDS              :         : 5         : Y              
 Data_A_H(n)                  : K12       : input  : LVDS              :         : 5         : Y              

@@ -1,5 +1,5 @@
 Partition Merge report for DSReceiver
-Thu Nov 22 06:45:18 2018
+Fri Nov 23 00:13:48 2018
 Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                          ;
 +------------------------------------+---------------------------------------------+
-; Partition Merge Status             ; Successful - Thu Nov 22 06:45:18 2018       ;
+; Partition Merge Status             ; Successful - Fri Nov 23 00:13:48 2018       ;
 ; Quartus II 64-Bit Version          ; 14.1.0 Build 186 12/03/2014 SJ Full Version ;
 ; Revision Name                      ; DSReceiver                                  ;
 ; Top-level Entity Name              ; DSReceiver                                  ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 1,549                                       ;
-;     Total combinational functions  ; 808                                         ;
-;     Dedicated logic registers      ; 1,240                                       ;
-; Total registers                    ; 1240                                        ;
+; Total logic elements               ; 2,965                                       ;
+;     Total combinational functions  ; 1,240                                       ;
+;     Dedicated logic registers      ; 2,501                                       ;
+; Total registers                    ; 2501                                        ;
 ; Total pins                         ; 17                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 13,056                                      ;
+; Total memory bits                  ; 35,552                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total GXB Receiver Channel PCS     ; 0                                           ;
 ; Total GXB Receiver Channel PMA     ; 0                                           ;
@@ -76,147 +76,315 @@ agreement for further details.
 +--------------------------------+----------------+-------------------+------------------------+--------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                        ;
-+----------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------------------------------------------+---------+
-; Name                                               ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                                     ; Details ;
-+----------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------------------------------------------+---------+
-; AD9253Driver:AD9253Driver_inst|Data_CH1[0]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[0]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[0]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[0]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[10]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[10]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[10]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[10]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[11]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[11]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[11]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[11]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[12]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[12]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[12]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[12]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[13]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[13]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[13]        ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[13]~reg0                                      ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[1]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[1]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[1]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[1]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[2]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[2]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[2]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[2]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[3]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[3]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[3]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[3]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[4]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[4]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[4]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[4]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[5]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[5]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[5]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[5]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[6]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[6]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[6]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[6]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[7]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[7]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[7]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[7]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[8]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[8]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[8]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[8]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[9]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[9]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_CH1[9]         ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[9]~reg0                                       ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_VLD            ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_VLD~reg0                                          ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|Data_VLD            ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_VLD~reg0                                          ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Down[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_H_Rise[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Down[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO_COUNT_L_Rise[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[0] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[0]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[1] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[1]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[2] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[2]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[2] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[2]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[3] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[3]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[3] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[3]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[4] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[4]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[4] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[4]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[5] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[5]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[5] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[5]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[6] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[6]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[6] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[6]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[7] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[7]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[7] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_H_CH1[7]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[2] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[2]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[2] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[2]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[3] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[3]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[3] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[3]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[4] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[4]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[4] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[4]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[5] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[5]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[5] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[5]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[6] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[6]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[6] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[6]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[7] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[7]                                    ; N/A     ;
-; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[7] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|REG_DATA_L_L_CH1[7]                                    ; N/A     ;
-; DCO                                                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|DCO                                                    ; N/A     ;
-; DCO                                                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|DCO                                                    ; N/A     ;
-; Data_A_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_A_H                                               ; N/A     ;
-; Data_A_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_A_H                                               ; N/A     ;
-; Data_A_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_A_L                                               ; N/A     ;
-; Data_A_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_A_L                                               ; N/A     ;
-; Data_B_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_B_H                                               ; N/A     ;
-; Data_B_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_B_H                                               ; N/A     ;
-; Data_B_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_B_L                                               ; N/A     ;
-; Data_B_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_B_L                                               ; N/A     ;
-; Data_C_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_C_H                                               ; N/A     ;
-; Data_C_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_C_H                                               ; N/A     ;
-; Data_C_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_C_L                                               ; N/A     ;
-; Data_C_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_C_L                                               ; N/A     ;
-; Data_D_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_D_H                                               ; N/A     ;
-; Data_D_H                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_D_H                                               ; N/A     ;
-; Data_D_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_D_L                                               ; N/A     ;
-; Data_D_L                                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_D_L                                               ; N/A     ;
-; FCO                                                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO                                                    ; N/A     ;
-; FCO                                                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO                                                    ; N/A     ;
-; MyPLL:MyPLL_inst|c0                                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MyPLL:MyPLL_inst|altpll:altpll_component|MyPLL_altpll:auto_generated|wire_pll1_clk[0] ; N/A     ;
-; Rst_n                                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Rst_n                                                                                 ; N/A     ;
-; Rst_n                                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Rst_n                                                                                 ; N/A     ;
-; cs                                                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|cs~reg0                                                            ; N/A     ;
-; cs                                                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|cs~reg0                                                            ; N/A     ;
-; data                                               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|data_buf[23]                                                       ; N/A     ;
-; data                                               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|data_buf[23]                                                       ; N/A     ;
-; sclk                                               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|sclk~reg0                                                          ; N/A     ;
-; sclk                                               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|sclk~reg0                                                          ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|gnd                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-; auto_signaltap_0|vcc                               ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                   ; N/A     ;
-+----------------------------------------------------+---------------+-----------+--------------------------------+-------------------+---------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "auto_signaltap_0"                                                                                                                                                                      ;
++---------------------------------------------+---------------+-----------+--------------------------------+-------------------+--------------------------------------------------------------------------------------------+---------+
+; Name                                        ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                                                                          ; Details ;
++---------------------------------------------+---------------+-----------+--------------------------------+-------------------+--------------------------------------------------------------------------------------------+---------+
+; AD9253Driver:AD9253Driver_inst|Data_CH0[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH0[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH0[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH1[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH1[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH2[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH2[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[0]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[0]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[10] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[10]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[11] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[11]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[12] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[12]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[13] ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[13]~reg0                                           ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[1]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[1]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[2]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[2]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[3]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[3]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[4]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[4]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[5]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[5]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[6]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[6]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[7]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[7]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[8]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[8]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_CH3[9]  ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_CH3[9]~reg0                                            ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_VLD     ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_VLD~reg0                                               ; N/A     ;
+; AD9253Driver:AD9253Driver_inst|Data_VLD     ; pre-synthesis ; connected ; AD9253Driver:AD9253Driver_inst ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|Data_VLD~reg0                                               ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[0] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~0 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[1] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~2 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[2] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~4 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|wrusedw[3] ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|op_1~6 ; N/A     ;
+; DCO                                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|DCO                                                         ; N/A     ;
+; DCO                                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|DCO                                                         ; N/A     ;
+; FCO                                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO                                                         ; N/A     ;
+; FCO                                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD9253Driver:AD9253Driver_inst|FCO                                                         ; N/A     ;
+; MR_DATA_CH0[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[0]                                                                             ; N/A     ;
+; MR_DATA_CH0[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[0]                                                                             ; N/A     ;
+; MR_DATA_CH0[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[10]                                                                            ; N/A     ;
+; MR_DATA_CH0[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[10]                                                                            ; N/A     ;
+; MR_DATA_CH0[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[11]                                                                            ; N/A     ;
+; MR_DATA_CH0[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[11]                                                                            ; N/A     ;
+; MR_DATA_CH0[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[12]                                                                            ; N/A     ;
+; MR_DATA_CH0[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[12]                                                                            ; N/A     ;
+; MR_DATA_CH0[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[13]                                                                            ; N/A     ;
+; MR_DATA_CH0[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[13]                                                                            ; N/A     ;
+; MR_DATA_CH0[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[1]                                                                             ; N/A     ;
+; MR_DATA_CH0[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[1]                                                                             ; N/A     ;
+; MR_DATA_CH0[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[2]                                                                             ; N/A     ;
+; MR_DATA_CH0[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[2]                                                                             ; N/A     ;
+; MR_DATA_CH0[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[3]                                                                             ; N/A     ;
+; MR_DATA_CH0[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[3]                                                                             ; N/A     ;
+; MR_DATA_CH0[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[4]                                                                             ; N/A     ;
+; MR_DATA_CH0[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[4]                                                                             ; N/A     ;
+; MR_DATA_CH0[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[5]                                                                             ; N/A     ;
+; MR_DATA_CH0[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[5]                                                                             ; N/A     ;
+; MR_DATA_CH0[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[6]                                                                             ; N/A     ;
+; MR_DATA_CH0[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[6]                                                                             ; N/A     ;
+; MR_DATA_CH0[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[7]                                                                             ; N/A     ;
+; MR_DATA_CH0[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[7]                                                                             ; N/A     ;
+; MR_DATA_CH0[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[8]                                                                             ; N/A     ;
+; MR_DATA_CH0[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[8]                                                                             ; N/A     ;
+; MR_DATA_CH0[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[9]                                                                             ; N/A     ;
+; MR_DATA_CH0[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH0[9]                                                                             ; N/A     ;
+; MR_DATA_CH1[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[0]                                                                             ; N/A     ;
+; MR_DATA_CH1[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[0]                                                                             ; N/A     ;
+; MR_DATA_CH1[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[10]                                                                            ; N/A     ;
+; MR_DATA_CH1[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[10]                                                                            ; N/A     ;
+; MR_DATA_CH1[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[11]                                                                            ; N/A     ;
+; MR_DATA_CH1[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[11]                                                                            ; N/A     ;
+; MR_DATA_CH1[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[12]                                                                            ; N/A     ;
+; MR_DATA_CH1[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[12]                                                                            ; N/A     ;
+; MR_DATA_CH1[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[13]                                                                            ; N/A     ;
+; MR_DATA_CH1[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[13]                                                                            ; N/A     ;
+; MR_DATA_CH1[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[1]                                                                             ; N/A     ;
+; MR_DATA_CH1[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[1]                                                                             ; N/A     ;
+; MR_DATA_CH1[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[2]                                                                             ; N/A     ;
+; MR_DATA_CH1[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[2]                                                                             ; N/A     ;
+; MR_DATA_CH1[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[3]                                                                             ; N/A     ;
+; MR_DATA_CH1[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[3]                                                                             ; N/A     ;
+; MR_DATA_CH1[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[4]                                                                             ; N/A     ;
+; MR_DATA_CH1[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[4]                                                                             ; N/A     ;
+; MR_DATA_CH1[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[5]                                                                             ; N/A     ;
+; MR_DATA_CH1[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[5]                                                                             ; N/A     ;
+; MR_DATA_CH1[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[6]                                                                             ; N/A     ;
+; MR_DATA_CH1[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[6]                                                                             ; N/A     ;
+; MR_DATA_CH1[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[7]                                                                             ; N/A     ;
+; MR_DATA_CH1[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[7]                                                                             ; N/A     ;
+; MR_DATA_CH1[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[8]                                                                             ; N/A     ;
+; MR_DATA_CH1[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[8]                                                                             ; N/A     ;
+; MR_DATA_CH1[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[9]                                                                             ; N/A     ;
+; MR_DATA_CH1[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH1[9]                                                                             ; N/A     ;
+; MR_DATA_CH2[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[0]                                                                             ; N/A     ;
+; MR_DATA_CH2[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[0]                                                                             ; N/A     ;
+; MR_DATA_CH2[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[10]                                                                            ; N/A     ;
+; MR_DATA_CH2[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[10]                                                                            ; N/A     ;
+; MR_DATA_CH2[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[11]                                                                            ; N/A     ;
+; MR_DATA_CH2[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[11]                                                                            ; N/A     ;
+; MR_DATA_CH2[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[12]                                                                            ; N/A     ;
+; MR_DATA_CH2[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[12]                                                                            ; N/A     ;
+; MR_DATA_CH2[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[13]                                                                            ; N/A     ;
+; MR_DATA_CH2[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[13]                                                                            ; N/A     ;
+; MR_DATA_CH2[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[1]                                                                             ; N/A     ;
+; MR_DATA_CH2[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[1]                                                                             ; N/A     ;
+; MR_DATA_CH2[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[2]                                                                             ; N/A     ;
+; MR_DATA_CH2[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[2]                                                                             ; N/A     ;
+; MR_DATA_CH2[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[3]                                                                             ; N/A     ;
+; MR_DATA_CH2[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[3]                                                                             ; N/A     ;
+; MR_DATA_CH2[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[4]                                                                             ; N/A     ;
+; MR_DATA_CH2[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[4]                                                                             ; N/A     ;
+; MR_DATA_CH2[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[5]                                                                             ; N/A     ;
+; MR_DATA_CH2[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[5]                                                                             ; N/A     ;
+; MR_DATA_CH2[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[6]                                                                             ; N/A     ;
+; MR_DATA_CH2[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[6]                                                                             ; N/A     ;
+; MR_DATA_CH2[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[7]                                                                             ; N/A     ;
+; MR_DATA_CH2[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[7]                                                                             ; N/A     ;
+; MR_DATA_CH2[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[8]                                                                             ; N/A     ;
+; MR_DATA_CH2[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[8]                                                                             ; N/A     ;
+; MR_DATA_CH2[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[9]                                                                             ; N/A     ;
+; MR_DATA_CH2[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH2[9]                                                                             ; N/A     ;
+; MR_DATA_CH3[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[0]                                                                             ; N/A     ;
+; MR_DATA_CH3[0]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[0]                                                                             ; N/A     ;
+; MR_DATA_CH3[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[10]                                                                            ; N/A     ;
+; MR_DATA_CH3[10]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[10]                                                                            ; N/A     ;
+; MR_DATA_CH3[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[11]                                                                            ; N/A     ;
+; MR_DATA_CH3[11]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[11]                                                                            ; N/A     ;
+; MR_DATA_CH3[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[12]                                                                            ; N/A     ;
+; MR_DATA_CH3[12]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[12]                                                                            ; N/A     ;
+; MR_DATA_CH3[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[13]                                                                            ; N/A     ;
+; MR_DATA_CH3[13]                             ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[13]                                                                            ; N/A     ;
+; MR_DATA_CH3[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[1]                                                                             ; N/A     ;
+; MR_DATA_CH3[1]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[1]                                                                             ; N/A     ;
+; MR_DATA_CH3[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[2]                                                                             ; N/A     ;
+; MR_DATA_CH3[2]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[2]                                                                             ; N/A     ;
+; MR_DATA_CH3[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[3]                                                                             ; N/A     ;
+; MR_DATA_CH3[3]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[3]                                                                             ; N/A     ;
+; MR_DATA_CH3[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[4]                                                                             ; N/A     ;
+; MR_DATA_CH3[4]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[4]                                                                             ; N/A     ;
+; MR_DATA_CH3[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[5]                                                                             ; N/A     ;
+; MR_DATA_CH3[5]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[5]                                                                             ; N/A     ;
+; MR_DATA_CH3[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[6]                                                                             ; N/A     ;
+; MR_DATA_CH3[6]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[6]                                                                             ; N/A     ;
+; MR_DATA_CH3[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[7]                                                                             ; N/A     ;
+; MR_DATA_CH3[7]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[7]                                                                             ; N/A     ;
+; MR_DATA_CH3[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[8]                                                                             ; N/A     ;
+; MR_DATA_CH3[8]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[8]                                                                             ; N/A     ;
+; MR_DATA_CH3[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[9]                                                                             ; N/A     ;
+; MR_DATA_CH3[9]                              ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MR_DATA_CH3[9]                                                                             ; N/A     ;
+; MyPLL:MyPLL_inst|c0                         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; MyPLL:MyPLL_inst|altpll:altpll_component|MyPLL_altpll:auto_generated|wire_pll1_clk[0]      ; N/A     ;
+; Rst_n                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Rst_n                                                                                      ; N/A     ;
+; Rst_n                                       ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; Rst_n                                                                                      ; N/A     ;
+; cs                                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|cs~reg0                                                                 ; N/A     ;
+; cs                                          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|cs~reg0                                                                 ; N/A     ;
+; data                                        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|data_buf[23]                                                            ; N/A     ;
+; data                                        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|data_buf[23]                                                            ; N/A     ;
+; sclk                                        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|sclk~reg0                                                               ; N/A     ;
+; sclk                                        ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; AD5624:AD5624_inst|sclk~reg0                                                               ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|gnd                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
+; auto_signaltap_0|vcc                        ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~VCC                                                        ; N/A     ;
++---------------------------------------------+---------------+-----------+--------------------------------+-------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -224,66 +392,66 @@ agreement for further details.
 +---------------------------------------------+------+--------------------+--------------------------------+------------------+--------------------------------+--------------------------------+
 ; Statistic                                   ; Top  ; AD5624:AD5624_inst ; AD9253Driver:AD9253Driver_inst ; sld_hub:auto_hub ; sld_signaltap:auto_signaltap_0 ; hard_block:auto_generated_inst ;
 +---------------------------------------------+------+--------------------+--------------------------------+------------------+--------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 20   ; 79                 ; 198                            ; 163              ; 1089                           ; 0                              ;
+; Estimated Total logic elements              ; 381  ; 79                 ; 145                            ; 164              ; 2212                           ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
-; Total combinational functions               ; 20   ; 79                 ; 81                             ; 147              ; 481                            ; 0                              ;
+; Total combinational functions               ; 241  ; 79                 ; 8                              ; 148              ; 764                            ; 0                              ;
 ; Logic element usage by number of LUT inputs ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- 4 input functions                    ; 18   ; 24                 ; 0                              ; 56               ; 226                            ; 0                              ;
-;     -- 3 input functions                    ; 1    ; 25                 ; 72                             ; 54               ; 140                            ; 0                              ;
-;     -- <=2 input functions                  ; 1    ; 30                 ; 9                              ; 37               ; 115                            ; 0                              ;
+;     -- 4 input functions                    ; 83   ; 24                 ; 2                              ; 56               ; 422                            ; 0                              ;
+;     -- 3 input functions                    ; 36   ; 25                 ; 0                              ; 55               ; 225                            ; 0                              ;
+;     -- <=2 input functions                  ; 122  ; 30                 ; 6                              ; 37               ; 117                            ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Logic elements by mode                      ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- normal mode                          ; 20   ; 57                 ; 81                             ; 139              ; 409                            ; 0                              ;
-;     -- arithmetic mode                      ; 0    ; 22                 ; 0                              ; 8                ; 72                             ; 0                              ;
+;     -- normal mode                          ; 229  ; 57                 ; 6                              ; 140              ; 690                            ; 0                              ;
+;     -- arithmetic mode                      ; 12   ; 22                 ; 2                              ; 8                ; 74                             ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
-; Total registers                             ; 0    ; 53                 ; 182                            ; 100              ; 905                            ; 0                              ;
-;     -- Dedicated logic registers            ; 0    ; 53                 ; 182                            ; 100              ; 905                            ; 0                              ;
+; Total registers                             ; 292  ; 53                 ; 141                            ; 100              ; 1915                           ; 0                              ;
+;     -- Dedicated logic registers            ; 292  ; 53                 ; 141                            ; 100              ; 1915                           ; 0                              ;
 ;     -- I/O registers                        ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Virtual pins                                ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
 ; I/O pins                                    ; 17   ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
-; Total memory bits                           ; 0    ; 0                  ; 0                              ; 0                ; 13056                          ; 0                              ;
+; Total memory bits                           ; 896  ; 0                  ; 96                             ; 0                ; 34560                          ; 0                              ;
 ; Total RAM block bits                        ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
 ; JTAG                                        ; 1    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
 ; PLL                                         ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 1                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Connections                                 ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- Input Connections                    ; 63   ; 98                 ; 375                            ; 143              ; 1329                           ; 1                              ;
-;     -- Registered Input Connections         ; 0    ; 73                 ; 299                            ; 111              ; 1033                           ; 0                              ;
-;     -- Output Connections                   ; 1017 ; 9                  ; 131                            ; 193              ; 34                             ; 625                            ;
-;     -- Registered Output Connections        ; 0    ; 9                  ; 131                            ; 192              ; 0                              ; 0                              ;
+;     -- Input Connections                    ; 526  ; 98                 ; 190                            ; 143              ; 2759                           ; 1                              ;
+;     -- Registered Input Connections         ; 460  ; 73                 ; 190                            ; 111              ; 2211                           ; 0                              ;
+;     -- Output Connections                   ; 1382 ; 9                  ; 174                            ; 277              ; 34                             ; 1841                           ;
+;     -- Registered Output Connections        ; 112  ; 9                  ; 174                            ; 276              ; 0                              ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Internal Connections                        ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- Total Connections                    ; 1124 ; 409                ; 901                            ; 982              ; 5299                           ; 627                            ;
-;     -- Registered Connections               ; 0    ; 222                ; 648                            ; 723              ; 3740                           ; 0                              ;
+;     -- Total Connections                    ; 3524 ; 409                ; 720                            ; 1069             ; 10802                          ; 1843                           ;
+;     -- Registered Connections               ; 1491 ; 222                ; 622                            ; 808              ; 8282                           ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; External Connections                        ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- Top                                  ; 0    ; 48                 ; 432                            ; 132              ; 465                            ; 3                              ;
+;     -- Top                                  ; 0    ; 48                 ; 250                            ; 132              ; 1015                           ; 463                            ;
 ;     -- AD5624:AD5624_inst                   ; 48   ; 0                  ; 0                              ; 0                ; 6                              ; 53                             ;
-;     -- AD9253Driver:AD9253Driver_inst       ; 432  ; 0                  ; 0                              ; 0                ; 74                             ; 0                              ;
-;     -- sld_hub:auto_hub                     ; 132  ; 0                  ; 0                              ; 20               ; 184                            ; 0                              ;
-;     -- sld_signaltap:auto_signaltap_0       ; 465  ; 6                  ; 74                             ; 184              ; 64                             ; 570                            ;
-;     -- hard_block:auto_generated_inst       ; 3    ; 53                 ; 0                              ; 0                ; 570                            ; 0                              ;
+;     -- AD9253Driver:AD9253Driver_inst       ; 250  ; 0                  ; 0                              ; 0                ; 114                            ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 132  ; 0                  ; 0                              ; 20               ; 268                            ; 0                              ;
+;     -- sld_signaltap:auto_signaltap_0       ; 1015 ; 6                  ; 114                            ; 268              ; 64                             ; 1326                           ;
+;     -- hard_block:auto_generated_inst       ; 463  ; 53                 ; 0                              ; 0                ; 1326                           ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Partition Interface                         ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- Input Ports                          ; 15   ; 2                  ; 10                             ; 44               ; 221                            ; 1                              ;
-;     -- Output Ports                         ; 7    ; 3                  ; 79                             ; 62               ; 117                            ; 3                              ;
+;     -- Input Ports                          ; 15   ; 2                  ; 10                             ; 44               ; 473                            ; 1                              ;
+;     -- Output Ports                         ; 79   ; 3                  ; 57                             ; 62               ; 285                            ; 3                              ;
 ;     -- Bidir Ports                          ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Registered Ports                            ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- Registered Input Ports               ; 0    ; 2                  ; 10                             ; 4                ; 108                            ; 0                              ;
-;     -- Registered Output Ports              ; 0    ; 3                  ; 79                             ; 28               ; 103                            ; 0                              ;
+;     -- Registered Input Ports               ; 0    ; 2                  ; 10                             ; 4                ; 276                            ; 0                              ;
+;     -- Registered Output Ports              ; 0    ; 3                  ; 57                             ; 28               ; 271                            ; 0                              ;
 ;                                             ;      ;                    ;                                ;                  ;                                ;                                ;
 ; Port Connectivity                           ;      ;                    ;                                ;                  ;                                ;                                ;
-;     -- Input Ports driven by GND            ; 0    ; 0                  ; 0                              ; 0                ; 13                             ; 0                              ;
+;     -- Input Ports driven by GND            ; 0    ; 0                  ; 0                              ; 0                ; 9                              ; 0                              ;
 ;     -- Output Ports driven by GND           ; 0    ; 0                  ; 0                              ; 28               ; 2                              ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0    ; 0                  ; 0                              ; 0                ; 19                             ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0    ; 0                  ; 0                              ; 0                ; 23                             ; 0                              ;
 ;     -- Output Ports driven by VCC           ; 0    ; 0                  ; 0                              ; 0                ; 1                              ; 0                              ;
-;     -- Input Ports with no Source           ; 0    ; 0                  ; 0                              ; 24               ; 54                             ; 0                              ;
+;     -- Input Ports with no Source           ; 0    ; 0                  ; 0                              ; 24               ; 138                            ; 0                              ;
 ;     -- Output Ports with no Source          ; 0    ; 0                  ; 0                              ; 0                ; 0                              ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0    ; 0                  ; 0                              ; 29               ; 68                             ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0    ; 0                  ; 22                             ; 29               ; 105                            ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0    ; 0                  ; 0                              ; 29               ; 152                            ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0    ; 0                  ; 0                              ; 29               ; 273                            ; 0                              ;
 +---------------------------------------------+------+--------------------+--------------------------------+------------------+--------------------------------+--------------------------------+
 Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
 
@@ -385,6 +553,150 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;     -- data~output                             ; Top                            ; Output Buffer ; Unplaced ; Synthesized ;
 ;     -- AD5624:AD5624_inst|data                 ; AD5624:AD5624_inst             ; Output Port   ; n/a      ;             ;
 ;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch0_wrusedw_0_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch0_wrusedw_1_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch0_wrusedw_2_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch0_wrusedw_3_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch1_wrusedw_0_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch1_wrusedw_1_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch1_wrusedw_2_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch1_wrusedw_3_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch2_wrusedw_0_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch2_wrusedw_1_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch2_wrusedw_2_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch2_wrusedw_3_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch3_wrusedw_0_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch3_wrusedw_1_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch3_wrusedw_2_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.ADCFIFO14X8_inst_ch3_wrusedw_3_     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_0_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_10_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_11_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_12_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_13_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_1_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_2_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_3_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_4_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_5_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_6_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_7_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_8_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH0_9_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_0_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_10_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_11_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_12_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_13_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_1_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_2_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_3_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_4_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_5_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_6_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_7_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_8_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH1_9_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_0_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_10_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_11_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_12_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_13_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_1_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_2_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_3_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_4_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_5_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_6_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_7_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_8_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH2_9_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_0_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_10_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_11_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_12_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_13_                     ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_1_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_2_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_3_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_4_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_5_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_6_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_7_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_8_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
+; pre_syn.bp.MR_DATA_CH3_9_                      ; Top                            ; Output Port   ; n/a      ;             ;
+;                                                ;                                ;               ;          ;             ;
 ; pre_syn.bp.MyPLL_inst_c0                       ; Top                            ; Output Port   ; n/a      ;             ;
 ;                                                ;                                ;               ;          ;             ;
 ; sclk                                           ; Top                            ; Output Port   ; n/a      ;             ;
@@ -401,7 +713,7 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ; Resource                 ; Usage                                                                                 ;
 +--------------------------+---------------------------------------------------------------------------------------+
 ; I/O pins                 ; 17                                                                                    ;
-; Total memory bits        ; 13056                                                                                 ;
+; Total memory bits        ; 35552                                                                                 ;
 ;                          ;                                                                                       ;
 ; DSP block 9-bit elements ; 0                                                                                     ;
 ;                          ;                                                                                       ;
@@ -409,9 +721,9 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;     -- PLLs              ; 1                                                                                     ;
 ;                          ;                                                                                       ;
 ; Maximum fan-out node     ; MyPLL:MyPLL_inst|altpll:altpll_component|MyPLL_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out          ; 626                                                                                   ;
-; Total fan-out            ; 7303                                                                                  ;
-; Average fan-out          ; 3.41                                                                                  ;
+; Maximum fan-out          ; 1786                                                                                  ;
+; Total fan-out            ; 14422                                                                                 ;
+; Average fan-out          ; 3.60                                                                                  ;
 +--------------------------+---------------------------------------------------------------------------------------+
 
 
@@ -420,7 +732,12 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 ; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
-; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_8224:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 51           ; 256          ; 51           ; 13056 ; None ;
+; AD9253Driver:AD9253Driver_inst|altshift_taps:Data_CH0_COMB_rtl_0|shift_taps_4am:auto_generated|altsyncram_po31:altsyncram4|ALTSYNCRAM                                                                 ; AUTO ; Simple Dual Port ; 3            ; 32           ; 3            ; 32           ; 96    ; None ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch0|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|altsyncram_m311:fifo_ram|ALTSYNCRAM                                                                               ; AUTO ; Simple Dual Port ; 16           ; 14           ; 16           ; 14           ; 224   ; None ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch1|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|altsyncram_m311:fifo_ram|ALTSYNCRAM                                                                               ; AUTO ; Simple Dual Port ; 16           ; 14           ; 16           ; 14           ; 224   ; None ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch2|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|altsyncram_m311:fifo_ram|ALTSYNCRAM                                                                               ; AUTO ; Simple Dual Port ; 16           ; 14           ; 16           ; 14           ; 224   ; None ;
+; ADCFIFO14X8:ADCFIFO14X8_inst_ch3|dcfifo:dcfifo_component|dcfifo_i5f1:auto_generated|altsyncram_m311:fifo_ram|ALTSYNCRAM                                                                               ; AUTO ; Simple Dual Port ; 16           ; 14           ; 16           ; 14           ; 224   ; None ;
+; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_e524:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 256          ; 135          ; 256          ; 135          ; 34560 ; None ;
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
 
 
@@ -430,27 +747,27 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
-    Info: Processing started: Thu Nov 22 06:45:16 2018
+    Info: Processing started: Fri Nov 23 00:13:46 2018
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off DSReceiver -c DSReceiver --merge=on
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "AD5624:AD5624_inst"
 Info (35007): Using synthesis netlist for partition "AD9253Driver:AD9253Driver_inst"
 Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
 Info (35007): Using synthesis netlist for partition "sld_signaltap:auto_signaltap_0"
-Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 135 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35024): Succesfully connected in-system debug instance "auto_signaltap_0" to all 303 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (35002): Resolved and merged 5 partition(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1638 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3255 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 1564 logic cells
-    Info (21064): Implemented 51 RAM segments
+    Info (21061): Implemented 3009 logic cells
+    Info (21064): Implemented 223 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 622 megabytes
-    Info: Processing ended: Thu Nov 22 06:45:18 2018
+    Info: Peak virtual memory: 635 megabytes
+    Info: Processing ended: Fri Nov 23 00:13:48 2018
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

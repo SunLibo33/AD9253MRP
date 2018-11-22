@@ -10,7 +10,7 @@ create_clock -period 3.125 -waveform {0.78125 2.34375} -name DCO_CLK [get_ports 
 create_clock -period 1.5625 -name CLK_VIR -waveform {0 0.78125}
 
 set_input_delay -clock CLK_VIR \
--max 0.5 \
+-max 0.6 \
 [get_ports {FCO}]
 
 set_input_delay -clock CLK_VIR \
@@ -18,7 +18,7 @@ set_input_delay -clock CLK_VIR \
 [get_ports {FCO}]
 
 set_input_delay -clock CLK_VIR \
--max 0.5 \
+-max 0.6 \
 [get_ports {Data_B_L}]
 
 set_input_delay -clock CLK_VIR \
@@ -27,12 +27,66 @@ set_input_delay -clock CLK_VIR \
 
 
 set_input_delay -clock CLK_VIR \
--max 0.5 \
+-max 0.6 \
 [get_ports {Data_B_H}]
 
 set_input_delay -clock CLK_VIR \
 -min 0.03 \
 [get_ports {Data_B_H}]
+
+set_input_delay -clock CLK_VIR \
+-max 0.6 \
+[get_ports {Data_A_L}]
+
+set_input_delay -clock CLK_VIR \
+-min 0.03 \
+[get_ports {Data_A_L}]
+
+
+set_input_delay -clock CLK_VIR \
+-max 0.6 \
+[get_ports {Data_A_H}]
+
+set_input_delay -clock CLK_VIR \
+-min 0.03 \
+[get_ports {Data_A_H}]
+
+
+set_input_delay -clock CLK_VIR \
+-max 0.6 \
+[get_ports {Data_C_L}]
+
+set_input_delay -clock CLK_VIR \
+-min 0.03 \
+[get_ports {Data_C_L}]
+
+
+set_input_delay -clock CLK_VIR \
+-max 0.6 \
+[get_ports {Data_C_H}]
+
+set_input_delay -clock CLK_VIR \
+-min 0.03 \
+[get_ports {Data_C_H}]
+
+
+set_input_delay -clock CLK_VIR \
+-max 0.6 \
+[get_ports {Data_D_L}]
+
+set_input_delay -clock CLK_VIR \
+-min 0.03 \
+[get_ports {Data_D_L}]
+
+
+set_input_delay -clock CLK_VIR \
+-max 0.6 \
+[get_ports {Data_D_H}]
+
+set_input_delay -clock CLK_VIR \
+-min 0.03 \
+[get_ports {Data_D_H}]
+
 
 
 

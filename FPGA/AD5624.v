@@ -65,12 +65,12 @@ always @(posedge clk)
 begin
 	if( (rst==1'b1)||(cs==1'b1) )
 	  case(REG_COUNT)
-	    3'b000:data_buf <= 24'h000d04;
+	    3'b000:data_buf <= 24'h000d04;  //default value = 24'h000d00 (normal mode) and testing value was 24'h000d04(16'h1555/16'h2AAA)
 		 3'b001:data_buf <= 24'h001531;
-		 3'b010:data_buf <= 24'h002134;
-		 3'b011:data_buf <= 24'h001804;
+		 3'b010:data_buf <= 24'h002134;  //default value = 24'h002130
+		 3'b011:data_buf <= 24'h001804;  //default value = 24'h001804
 		 3'b100:data_buf <= 24'h001606; 
-		 default:data_buf <= 24'h002134; 
+		 default:data_buf <= 24'h002134; //default value = 24'h002130
 	  endcase
 	  
 	else if( (cs==1'b0)&&(SPI_COUNT[4:0]==5'd0) && (sclkcount<=8'd47) && (sclkcount[0]==1'b1))

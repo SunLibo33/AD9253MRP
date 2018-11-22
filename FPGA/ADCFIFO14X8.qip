@@ -1,0 +1,9 @@
+set_global_assignment -name IP_TOOL_NAME "FIFO"
+set_global_assignment -name IP_TOOL_VERSION "14.1"
+set_global_assignment -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV GX}"
+set_global_assignment -name VERILOG_FILE [file join $::quartus(qip_path) "ADCFIFO14X8.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADCFIFO14X8.bsf"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADCFIFO14X8_inst.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADCFIFO14X8_bb.v"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADCFIFO14X8.inc"]
+set_global_assignment -name MISC_FILE [file join $::quartus(qip_path) "ADCFIFO14X8.cmp"]
